@@ -2,8 +2,9 @@ import React from 'react'
 import { Container, Row, Col, Form, Button } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { FaUserCircle } from 'react-icons/fa'
+import { withRouter } from 'react-router-dom'
 
-const LoginScreen = () => {
+const LoginScreen = ({history}) => {
   return (
     <div
       className='login-main d-flex justify-content-center align-items-center shadow-lg'
@@ -35,7 +36,10 @@ const LoginScreen = () => {
               />
               <h3 style={{ color: '#2f9fb7' }}>Login to Your Account</h3>
               <p className='fs-6'>Login using credentials</p>
-              <Form className='mt-5'>
+              <Form onSubmit={(e) => {
+                e.preventDefault()
+                history.push('/dashboard')
+              }} className='mt-5'>
                 <Row>
                   <Col xl='4' className='d-flex align-items-center m-0'>
                     <Form.Label className='m-0'>
@@ -82,4 +86,4 @@ const LoginScreen = () => {
   )
 }
 
-export default LoginScreen
+export default withRouter(LoginScreen)

@@ -1,6 +1,37 @@
 main{
     min-height: 100vh;
     
+    #main-content {
+        position: relative;
+        float: right;
+        min-height: 100vh;
+        width: calc(100% - 246px);
+    }
 
     @import './login.scss';
+
+    .header-main {
+        -moz-box-shadow: 0px 16px 10px -18px rgba(0, 0, 0, 0.175);
+        -webkit-box-shadow: 0px 16px 10px -18px rgba(0, 0, 0, 0.175);
+        box-shadow: 0px 16px 10px -18px rgba(0, 0, 0, 0.175);
+      }
+  
+      .footer-main {
+        -moz-box-shadow: 0px -8px 10px -15px rgba(0, 0, 0, 0.175);
+        -webkit-box-shadow: 0px -8px 10px -15px rgba(0, 0, 0, 0.175);
+        box-shadow: 0px -8px 10px -15px rgb(0, 0, 0);
+      }
 }
+
+#sidebar {
+    height: 100vh;
+    position: fixed;
+    overflow: auto;
+  }
+  
+  $sidebar-bg-color: #313a46;
+  $sidebar-color: #ffffff;
+  $icon-bg-color: #34373a;
+
+
+  @import '~react-pro-sidebar/dist/scss/styles.scss';

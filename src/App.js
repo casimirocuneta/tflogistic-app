@@ -4,12 +4,14 @@ import './styles/styles.js'
 
 // Screen
 import LoginScreen from './components/screens/LoginScreen'
+import DashboardScreen from './components/screens/DashboardScreen.js'
 
 const App = () => {
   return (
     <main>
       <Switch>
         <Route exact path='/' component={LoginScreen} />
+        <Route exact path='/dashboard' component={DashboardScreen} />
       </Switch>
     </main>
   )
