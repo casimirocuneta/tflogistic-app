@@ -93,7 +93,7 @@ const Sidebar = ({ fontSize, fontWeight }) => {
               icon={<FaClipboardList className='mx-2' />}
             >
               <NavLink
-                to='/profile'
+                to='/client-list'
                 activeStyle={{
                   fontWeight: '700',
                   color: '#FFF',
@@ -106,7 +106,7 @@ const Sidebar = ({ fontSize, fontWeight }) => {
 
             <MenuItem className='my-4' icon={<FaClipboard className='mx-2' />}>
               <NavLink
-                to='/profile'
+                to='/supplier-list'
                 activeStyle={{
                   fontWeight: '700',
                   color: '#FFF',
@@ -119,7 +119,7 @@ const Sidebar = ({ fontSize, fontWeight }) => {
 
             <MenuItem className='my-4' icon={<FaDatabase className='mx-2' />}>
               <NavLink
-                to='/profile'
+                to='/inventory'
                 activeStyle={{
                   fontWeight: '700',
                   color: '#FFF',
@@ -132,14 +132,14 @@ const Sidebar = ({ fontSize, fontWeight }) => {
 
             <MenuItem className='my-4' icon={<FaUserAlt className='mx-2' />}>
               <NavLink
-                to='/profile'
+                to='/users-list'
                 activeStyle={{
                   fontWeight: '700',
                   color: '#FFF',
                 }}
                 className='fw-bold fs-6'
               >
-                PROFILE
+                USERS
               </NavLink>
             </MenuItem>
           </Menu>

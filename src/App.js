@@ -5,6 +5,8 @@ import './styles/styles.js'
 // Screen
 import LoginScreen from './components/screens/LoginScreen'
 import DashboardScreen from './components/screens/DashboardScreen.js'
+import ClientListScreen from './components/screens/ClientListScreen'
+import PageNotFoundScreen from './components/screens/PageNotFoundScreen.js'
 
 const App = () => {
   return (
@@ -12,6 +14,8 @@ const App = () => {
       <Switch>
         <Route exact path='/' component={LoginScreen} />
         <Route exact path='/dashboard' component={DashboardScreen} />
+        <Route exact path='/client-list' component={ClientListScreen} />
+        <Route component={PageNotFoundScreen} />
       </Switch>
     </main>
   )
