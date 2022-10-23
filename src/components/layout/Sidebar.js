@@ -148,7 +148,7 @@ const Sidebar = ({ fontSize, fontWeight }) => {
           <Menu>
             <MenuItem icon={<FaSignOutAlt className='fs-5 text-danger ' />}>
               <NavLink
-                to='/profile'
+                to='/'
                 activeStyle={{
                   fontWeight: '700',
                   color: '#FFF',
