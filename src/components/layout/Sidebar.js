@@ -3,7 +3,7 @@ import {
   ProSidebar,
   Menu,
   MenuItem,
-  SubMenu,
+  // SubMenu,
   SidebarHeader,
   SidebarContent,
   SidebarFooter,
@@ -12,7 +12,14 @@ import { NavLink } from 'react-router-dom'
 
 // Icons
 
-import { FaUserAlt, FaHome, FaSignOutAlt } from 'react-icons/fa'
+import {
+  FaUserAlt,
+  FaHome,
+  FaSignOutAlt,
+  FaClipboardList,
+  FaClipboard,
+  FaDatabase,
+} from 'react-icons/fa'
 
 const Sidebar = ({ fontSize, fontWeight }) => {
   return (
@@ -37,8 +44,8 @@ const Sidebar = ({ fontSize, fontWeight }) => {
               </NavLink>
             </MenuItem>
 
-            <SubMenu
-              title='TRANSACTION'
+            {/* <SubMenu
+              title='SAMPLE'
               className='my-3 fs-6 fw-bold'
               icon={
                 <FaHome style={{ fontSize, fontWeight }} className='mx-2' />
@@ -79,7 +86,49 @@ const Sidebar = ({ fontSize, fontWeight }) => {
                   HISTORY
                 </NavLink>
               </MenuItem>
-            </SubMenu>
+            </SubMenu> */}
+
+            <MenuItem
+              className='my-4'
+              icon={<FaClipboardList className='mx-2' />}
+            >
+              <NavLink
+                to='/profile'
+                activeStyle={{
+                  fontWeight: '700',
+                  color: '#FFF',
+                }}
+                className='fw-bold fs-6'
+              >
+                CLIENT
+              </NavLink>
+            </MenuItem>
+
+            <MenuItem className='my-4' icon={<FaClipboard className='mx-2' />}>
+              <NavLink
+                to='/profile'
+                activeStyle={{
+                  fontWeight: '700',
+                  color: '#FFF',
+                }}
+                className='fw-bold fs-6'
+              >
+                SUPPLIER
+              </NavLink>
+            </MenuItem>
+
+            <MenuItem className='my-4' icon={<FaDatabase className='mx-2' />}>
+              <NavLink
+                to='/profile'
+                activeStyle={{
+                  fontWeight: '700',
+                  color: '#FFF',
+                }}
+                className='fw-bold fs-6'
+              >
+                INVENTORY
+              </NavLink>
+            </MenuItem>
 
             <MenuItem className='my-4' icon={<FaUserAlt className='mx-2' />}>
               <NavLink
